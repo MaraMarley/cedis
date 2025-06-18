@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="titulo">RECIBO</div>
+    <div class="cuerpo">
+        <div class="texto">
+            <label for="ocInput">ESCRIBA OC A CERRAR</label>
+            <input type="text" id="ocInput" maxlength="15" [(ngModel)]="codigo_escaner" autofocus placeholder="Ingrese orden de compra">
+
+            <button type="submit" class="btn btn-primary btn-lg" (click)="enviarCierre()">Enviar</button>
+            <div [ngClass]="{'correcto': mensaje === 'CIERRE DE OC', 'incorrecto': mensaje === 'ERR CIERRE DE OC'}">
+                {{ mensaje }}
+            </div>
+        </div>
+        <div class="container2">
+            <div class="respuesta">
+                <div class="texto2">
+                    <label><strong>ESPERADO: <label>{{esperado}}</label></strong></label>
+                </div>
+                <div class="texto2">
+                    <label><strong>RECIBO: <label>{{recibo}}</label></strong></label>
+                </div>
+                <div class="texto2">
+                    <label><strong>DIFERENCIA: <label>{{diferencia}}</label></strong></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

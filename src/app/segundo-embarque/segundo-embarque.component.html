@@ -1,0 +1,50 @@
+
+<div class="container">
+  <div class="titulo">
+      <label for="">{{titulo}}</label>
+      <p>{{ subtitulo }}</p>
+  </div>
+  <div class="myForm">
+      <div>
+          <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="contenido">
+              <div class="textos">{{"Folio"}}</div>
+              <input type="text" class="form-control etiquetas" formControlName="folio" placeholder="captura folio..." autofocus 
+              (keydown)="onEnterPress($event)" [readonly]="isFolioReadonly" style="text-transform: uppercase;">
+            </div>
+            <div class="contenido" *ngIf="show">
+              <div class="textos">Tienda: </div>                
+              <div *ngIf="!!F3tienda" class="etiquetas" ><strong>{{F3tienda}}</strong></div>              
+            </div>
+            <div class="contenido" *ngIf="!!folio && !!F3escaneadas">
+              <div class="textos">Caja: </div>
+              <div  class="etiquetas"><strong>{{F3escaneadas}} {{" de " + F3totales}}</strong></div>              
+            </div>
+            <div class="contenido" *ngIf="!!folio">
+              <div class="textos">Escanear cajas</div>
+              <input type="text" class="form-control etiquetas" #EscanearcajaInput formControlName="Escanearcaja" placeholder="escanea código..." autofocus
+              (keydown)="onEnterPressScanner($event)" >
+            </div>
+             <div class="error">                
+              <div class="er">
+                <label for="">{{dataScaner}}</label> <br>
+                <label for="">{{ mensaje }}</label>
+                <label *ngIf="!!mensaje" for="">{{ mensaje }}</label>
+                  <label *ngIf="!!F3mensajeerror" for="">{{ F3mensajeerror }}</label>
+              </div>
+            </div>
+            <div class="opcionesF" *ngIf="!!folio">                
+              <div class="textos" (click)="fs(F3)" #F3 >{{this.form.get('F3')?.value}}</div>
+              <div class="textos" (click)="fs(F5)" #F5>{{this.form.get('F5')?.value}}</div>
+              <div class="textos" (click)="fs(F6)" #F6>{{this.form.get('F6')?.value}}</div>
+            </div>
+            <!-- <div *ngIf="F3folio">{{"Folio: "}} <strong>{{F3folio }}</strong> </div>
+            <div *ngIf="!!F3mensajeerror">{{"Mensaje: "}} <strong>{{F3mensajeerror}}</strong> </div>
+            <div *ngIf="!!F3totales">{{"Totales: "}} <strong>{{F3totales}}</strong> </div>
+            <div *ngIf="!!F3escaneadas"> {{"Escanadas: "}} <strong>{{F3escaneadas}}</strong> </div>              
+            <div *ngIf="!!F3tienda"> {{"Tienda: "}} <strong>{{F3tienda}}</strong> </div> -->
+          </form>
+        </div>
+        
+  </div>
+</div>

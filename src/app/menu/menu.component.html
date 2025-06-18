@@ -1,0 +1,233 @@
+<div class="container">
+    <div class="container-header">
+        <img src="../../assets/img/logo.png" alt="">
+        <h2><strong>{{ tituloHeader }}</strong></h2>
+    </div>
+    <br>
+    <hr style="margin-top: 2px; border: 1px solid;">
+    <label for="" class="menu">{{ 'Grupo: ' + perfilNombre}}</label>
+    <div class="container-cards">
+
+        <div class="card" *ngIf="calidad">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "CALIDAD" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/calidad.jpg" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/calidad'">
+            </mat-card>
+        </div>
+
+
+        <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "RECIBO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/recibo.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/recibo'">
+            </mat-card>
+        </div>
+
+
+        <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "PRIMER ESCANEO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/primer-scaneo.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/primer-scaner'">
+            </mat-card>
+        </div>
+
+        <!-- <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "1ER FALTANTES" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/primer-faltante.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/primer-faltantes'">
+            </mat-card>
+        </div> -->
+
+
+        <!-- cipias -->
+        <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "SEGUNDO ESCANEO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/segundo-scaneo.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/segundo-scaner'">
+            </mat-card>
+        </div>
+
+        <!-- <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "2DO FALTANTES" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/segundo-faltante.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/segundo-faltantes'">
+            </mat-card>
+        </div> -->
+         <!-- cipias -->
+
+
+
+        <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "CIERRE DE OC" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/oden-compra.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/cierre'">
+            </mat-card>
+        </div>
+
+
+        <div class="card" *ngIf="recibo">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "AVANCE RECIBO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/AVANCE-RECIBO.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/avance'">
+            </mat-card>
+        </div>
+
+        <div class="card" *ngIf="calidad">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "VALIDACIÓN PRECIOS" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/validacion-precios.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/validacion'">
+            </mat-card>
+        </div>
+
+
+        <div class="card" *ngIf="embarques">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "PRIMER CONTEO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/primer-conteo.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/primerConteo'">
+            </mat-card>
+        </div>
+
+        <div class="card" *ngIf="embarques">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "SEGUNDO CONTEO" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/segundo-conteo.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/segundoConteo'">
+            </mat-card>
+        </div>
+
+        <div class="card" *ngIf="embarques">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "MANIFIESTOS" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/manifiesto.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/manifestos'">
+            </mat-card>
+        </div>
+
+        <div class="card" *ngIf="bahia">
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title><strong>{{ cedisTitulo }}</strong></mat-card-title>
+                    <mat-card-subtitle><strong>{{ "VALIDA BAHÍA" }}</strong></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/img/valida-bahia.png" alt="Photo of a Shiba Inu"
+                    [routerLink]="'/validaBahia'">
+            </mat-card>
+        </div>
+    </div>
+    <hr style="margin-top: 2px; border: 2px solid;">
+    <br>
+</div>
+
+
+
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+<!-- <div class="container">
+    <div class="titulo">MENÚ</div>
+    <ul class="list-group listado">
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio"
+                [routerLink]="'/calidad'">
+            <label class="form-check-label" for="firstRadio">CALIDAD</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio"
+                [routerLink]="'/recibo'">
+            <label class="form-check-label" for="secondRadio">RECIBO</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio"
+                [routerLink]="'/cierre'">
+            <label class="form-check-label" for="thirdRadio">CIERRE DE OC</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="fourthRadio"
+                [routerLink]="'/avance'">
+            <label class="form-check-label" for="fourthRadio">AVANCE RECIBO</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="fifthRadio"
+                [routerLink]="'/validacion'">
+            <label class="form-check-label" for="fifthRadio">VALIDACION DE PRECIOS</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="sixthRadio"
+                [routerLink]="'/primerConteo'">
+            <label class="form-check-label" for="sixthRadio">PRIMER CONTEO</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="seventhRadio"
+                [routerLink]="'/segundoConteo'">
+            <label class="form-check-label" for="seventhRadio">SEGUNDO CONTEO</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="eightRadio"
+                [routerLink]="'/manifestos'">
+            <label class="form-check-label myMnfst" for="eightRadio">{{"Manifiestos"}}</label>
+        </li>
+        <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="ninhtRadio"
+                [routerLink]="'/validaBahia'">
+            <label class="form-check-label" for="ninhtRadio">{{" VALIDA BAHÍA "}}</label>
+        </li>
+    </ul>
+</div> -->

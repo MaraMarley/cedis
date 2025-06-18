@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="titulo">
+        <label for="">{{titulo}}</label>
+        <p>{{ subtitulo }}</p>
+    </div>
+    <div class="myForm">
+        <div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <div class="contenido">
+                <div class="textos">Embarque</div>
+                <input type="text" class="form-control etiquetas" formControlName="folio" placeholder="Captura Embarque" autofocus 
+                [readonly]="isFolioReadonly" style="text-transform: uppercase;">
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Descargar</button>
+               
+             
+            </form>
+          </div>
+          
+    </div>
+  </div>
+ 

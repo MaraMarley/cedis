@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="titulo"><strong>1er CONTEO</strong></div>
+    <div class="tituloRecibo">RECIBO</div>
+    <div class="primerEscaneo" *ngIf="version">Primer escaneo <strong>{{version}}</strong></div>
+    <div class="orden" *ngIf="orden">Orden <strong>{{orden}}</strong></div>
+    <div class="caja" *ngIf="caja && de">Caja <strong>{{caja}}</strong> de <strong>{{de}}</strong></div>
+    <div class="tituloInput">Escanear caja:</div>
+    <div class="divInput">        
+        <input type="text" #cajaInput (keydown.enter)="onEnter(cajaInput)" (focusout)="onFocusOut()">
+    </div>
+    <div *ngIf="msgError" class="msjError">{{"[Mensaje de error]"}} <strong>{{msgError}}</strong></div>
+    <div *ngIf="msNogError" class="msjNoError">{{"[Mensaje de NO error]"}} <strong>{{msNogError}}</strong></div>
+    <div class="Fs" *ngIf="opciones">{{opciones}}</div>
+    <div class="ultimaCajaEscaneada"><strong>{{ultimaCajaEscaneada}}</strong></div>
+</div>

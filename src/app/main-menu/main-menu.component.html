@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="container-header">
+      <img src="../../assets/img/m-roja.png" alt="">
+      <h1><strong>{{ "Perfiles Corporativos" }}</strong></h1>
+    </div>
+    
+    <div class="container-body">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <!-- <label for=""><strong>{{"Captura tu numero de perfil: "}}</strong></label> -->
+        <!-- <input type="text" formControlName="perfil" class="form-control" autofocus> -->
+        <mat-form-field >
+            <mat-label style="font-size: 12px;">Selecciona una opción</mat-label>
+            <mat-select [(value)]="selected" formControlName="perfil" >
+              <mat-option class="mat-option1" value="1">Calidad</mat-option>
+              <mat-option value="2">Recibo</mat-option>
+              <mat-option value="3">Embarque</mat-option>
+              <mat-option value="4">Bahía</mat-option>
+            </mat-select>
+          </mat-form-field>                    
+        <button class="btn btn-primary" type="submit">{{ "Entrar" }}</button>
+      </form>
+    </div>
+  </div>
+  

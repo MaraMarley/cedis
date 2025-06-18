@@ -1,0 +1,123 @@
+.container {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+    padding: 20px;
+
+    .titulo {
+        font-size: 60px;
+        color: red;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .myForm {       
+        width: 100%;
+        padding: 15px;
+        border: 3px solid blue;
+        border-radius: 12px;
+        box-shadow: 12px;
+        .text-input {
+            
+            display: flex;            
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 30px;
+
+            .Ubiclabel {
+                text-align: start;
+                width: 20%;
+            }
+            .Errorlabel{
+                color: red;
+                font-size: 20px;
+            }
+            .Respuestalabel{
+                font-size: 20px;
+            }
+
+            .ubictxt {
+                width: 70%;
+            }
+        }
+    }
+
+    .navegacion {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;        
+        width: 70%;
+        font-size: 25px;
+        border-left: 2px solid blue;
+        border-right: 2px solid blue;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .navegacion label {
+        transition: color 0.3s, transform 0.3s;
+        cursor: pointer;
+    }
+
+    .navegacion label:hover {
+        color: red;
+        transform: scale(1.1);
+    }
+
+   
+    @media screen and (max-width: 768px) {
+        .titulo {
+            font-size: 40px;
+        }
+
+        .myForm .text-input {
+            flex-direction: column;
+            font-size: 22px;
+
+            .Ubiclabel, .ubictxt {
+                width: 100%;
+            }            
+        }
+
+        .navegacion {
+            width: 90%;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: blue;
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .titulo {
+            font-size: 30px;
+        }
+
+        .navegacion {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navegacion label {
+            margin-bottom: 10px;
+            color: magenta;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .msj{
+            font-size: 13px !important;
+        }
+    }
+
+}

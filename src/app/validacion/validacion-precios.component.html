@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="titulo">REVISAR SKU</div>
+  <div class="texto">
+    <label for="ocInput">PROV-ESTILO</label>
+  </div>
+  <div class="cuerpo">
+    <form>
+      <div class="row mb-3">
+        <div class=" texto">
+          <label for="sku" class="form-label">SKU:</label>
+        </div>
+        <div class="">
+          <input autofocus type="text"   #autoResizeText class="form-control escaneo" id="sku" placeholder="Escanear SKU" [(ngModel)]="sku"
+            name="sku" (input)="manejarEscaneo($event)" (keydown)="onEnterPress($event)">
+        </div>
+      </div>
+
+      <div class="skuLabel " *ngIf="!!skuLabel">
+        <div>
+          {{"SKU: "}}{{ skuLabel }}
+        </div>
+      </div>
+
+      <div class="error ">
+        <div [ngClass]="{'correcto': mensaje === 'CORRECTO', 'incorrecto': mensaje === 'ERROR'}">
+          {{ mensaje }}
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="descripcion" class="form-label">Descripción:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{descripcion}}</label>
+          <!-- <input type="text" class="form-control" id="descripcion" [(ngModel)]="descripcion" name="descripcion"
+            placeholder="Descripción del producto" readonly> -->
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="precio" class="form-label">Precio Venta:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{precio}}</label>
+          <!-- <input type="text" class="form-control" id="precio" [(ngModel)]="precio" name="precio"
+            placeholder="Precio de venta" readonly> -->
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="proveedor" class="form-label">Proveedor:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{proveedor}}</label>
+          <!-- <input type="text" class="form-control" id="proveedor" [(ngModel)]="proveedor" name="proveedor"
+            placeholder="Proveedor del producto" readonly> -->
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="estilo" class="form-label">Estilo:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{estilo}}</label>
+          <!-- <input type="text" class="form-control" id="estilo" [(ngModel)]="estilo" name="estilo"
+            placeholder="Estilo del producto" readonly> -->
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="estilo" class="form-label">Color:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{color}}</label>
+          <!-- <input type="text" class="form-control" id="color" [(ngModel)]="color" name="color"
+            placeholder="Color del producto" readonly> -->
+        </div>
+      </div>
+
+      <div class="row mb-3" *ngIf="!huboError">
+        <div class="col-md-3">
+          <label for="estilo" class="form-label">Tamaño:</label>
+        </div>
+        <div class="col-md-9">
+          <label for="">{{tamano}}</label>
+          <!-- <input type="text" class="form-control" id="tamano" [(ngModel)]="tamano" name="tamano"
+            placeholder="Tamaño del producto" readonly> -->
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

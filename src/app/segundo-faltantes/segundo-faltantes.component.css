@@ -1,0 +1,23 @@
+.container{    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+    .title{
+            font-size: 35px;
+            font-weight: 800;            
+        }
+        .title-card{            
+            max-width: 60%;
+            font-size: 25px;
+            font-weight: 500;            
+        }
+        .lista{
+            height: 15px;
+            margin-top: -20px;
+            padding: none;
+            height: 0;
+            margin: 0;
+        }
+}

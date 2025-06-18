@@ -1,0 +1,172 @@
+.container {
+    position: relative;
+    width: 100%;    
+    height: 100%;
+    margin-top: 30px;
+    border-bottom: 3px solid gray;
+    border-right: 3px solid gray;
+    padding: 20px;
+    overflow: hidden;        
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../assets/img/menu-fodo-pantalla.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.4; 
+      z-index: 1;
+    }
+  
+    &::after {
+      content: '© 2025 Mi Empresa'; 
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgba(255, 255, 255, 0.3);
+      pointer-events: none;
+      user-select: none;
+      z-index: 2;
+      animation: fadeInOut 6s infinite ease-in-out;
+    }
+  
+    @keyframes fadeInOut {
+      0%, 100% {
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+  
+   
+    .container-header,
+    .container-body {
+      position: relative;
+      z-index: 3;
+      form{       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+      }
+    }
+  
+    .container-header {
+      margin-top: 30px;
+      display: flex;
+  
+      img {
+        width: 20%;
+        margin-top: -30px;
+         border-radius: 50%;
+      }
+  
+      h1 {
+        color: rgb(109, 105, 105);
+        width: 60%;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    }
+  
+    .container-body {
+      display: flex;
+      flex-direction: column;            
+      align-items: center;
+      justify-items: center;     
+
+      form{        
+        width: 40%;
+          mat-form-field{
+            width: 80%;
+          
+      }
+  
+      label {
+        display: flex;
+        color: rgb(109, 105, 105);
+        margin-bottom: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+  
+      mat-form-field {
+        display: flex;
+        .mat-option1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+      }
+  
+      button {
+        width: 100%;
+        border-radius: 30px;
+      }
+    }
+  
+    @media (max-width: 1024px) {     
+      .container-header {        
+        img {
+          width: 80px;
+          height: 80px;
+        }
+  
+        h1 {         
+          font-size: 12px;
+        }
+      }
+  
+      .container-body {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+      }
+    }
+  
+    @media (max-width: 600px) {      
+      .container-header {
+        img {
+          width: 0px;
+          height: 0px;
+        }
+  
+        h1 {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+  
+      .container-body label {
+        text-align: center;
+      }
+      
+    }
+  }  
+}
+
+@media (max-width: 600px) { 
+      .container{
+        .container-body{            
+            form{
+              width: 100%;
+            }
+          }
+      }
+      .container-header img{
+        display: none;        
+      } 
+      .container-header h1{        
+        min-width: 100%;
+        margin-bottom: 35px;
+      }
+  }

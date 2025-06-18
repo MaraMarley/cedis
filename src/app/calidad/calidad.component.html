@@ -1,0 +1,18 @@
+<!-- <img src="../../assets/img/calidad.jpg" style="border-radius: 50%; width: 5%; height: 5%;" alt=""> -->
+
+<div class="container">
+    <div class="titulo">CALIDAD</div>
+    <div class="cuerpo">
+        <div class="texto">
+            <label>INDICA OC EN CC</label>
+        </div>
+        <div class="area">
+            <textarea autofocus #autoResizeTextarea rows="1" cols="20" (keydown.enter)="onEnter(autoResizeTextarea)">
+        </textarea>
+            <div
+                [ngClass]="{'correcto': mensaje === 'OC EN CC PROGRAMADA', 'incorrecto': mensaje === 'ERR OC EN CC NO PROGRAMADA'}">
+                {{ mensaje }}
+            </div>
+        </div>
+    </div>
+</div>

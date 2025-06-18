@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="title">{{"1er FALTANTES"}}</div>
+    <div class="title-card">
+        <h3><strong>{{"RECIBO"}}</strong></h3>
+    </div>
+    <h5><strong>{{"1er Conteo por escanear"}}</strong>
+        <hr>
+    </h5>
+    <mat-list>
+        @for (re of paginaResultado; track re){
+        <div style="display: flex; gap: 10px;">
+            <span matListItemTitle><strong>{{re.registro}}</strong></span>
+            <span matListItemLine><strong>{{re.caja}}</strong></span>
+        </div>
+        }
+    </mat-list>
+
+    <h4><strong>{{"1:Salir 2: Anterior 3:Siguiente [ ]"}}</strong></h4>
+</div>

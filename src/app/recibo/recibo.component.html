@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div class="titulo">RECIBO CAJAS PROV</div>
+    <div class="cuerpo">
+        <div class="texto">
+            <label>ESCANEAR CAJA</label>
+        </div>
+        <div class="area">
+            <textarea autofocus #autoResizeTextarea rows="1" 
+            (keydown.enter)="onEnter(autoResizeTextarea)"></textarea>
+            <div [ngClass]="{'correcto': mensaje === 'OC PROGRAMADA', 'incorrecto': mensaje === 'ERR OC NO PROGRAMADA'}">
+                {{ mensaje }}
+            </div>
+       </div>
+    </div>
+</div>

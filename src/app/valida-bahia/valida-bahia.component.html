@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="titulo">{{ titulo }}</div>
+    <form action="" class="myForm" [formGroup]="form">
+        <div class="text-input">
+            <div class="Ubiclabel">
+                <label for=""><strong>{{ubicacion}}</strong></label>
+            </div>
+            <div class="ubictxt">
+                <input type="text" class="form-control" #ubicacionInput placeholder="captura ubicación" formControlName="ubicacion" autofocus
+                (keydown)="onEnterPress($event)" [readonly]="isFolioReadonly" style="text-transform: uppercase;">
+            </div>
+        </div>
+        <div class="text-input">
+            <div class="Ubiclabel">
+                <label for=""><strong>{{caja}}</strong></label>
+            </div>
+            <div class="ubictxt">
+                <input type="text" class="form-control" #cajaInput placeholder="captura No. caja" formControlName="caja"
+                (keydown)="onEnterPressCaja($event)">
+            </div>
+        </div>
+      
+        <div class="text-input msj" *ngIf="mensajeOk">
+            <div class="Errorlabel">
+                <label for=""><strong>{{msgOk }}</strong></label>                
+            </div>
+            <div class="Respuestalabel">
+                <label for=""><strong>{{mensajeOk}}</strong></label>                
+            </div>
+        </div>
+
+        <div class="text-input msj" *ngIf="mesajeErr">
+            <div class="Errorlabel">
+                <label for=""><strong>{{msgErr }}</strong></label>                
+            </div>
+            <div class="Respuestalabel">
+                <label for=""><strong >{{mesajeErr}}</strong></label>                
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="navegacion">        
+        <label for="" (click)="irAOtraPagina()" ><strong>{{ regresar }}</strong></label>
+        <label for=""  (click)="clickOtraCaja()" #otraCaja ><strong>{{ optionotraCaja }}</strong></label>        
+        <label for=""  (click)="click7()" #otraCaja ><strong>{{ Siete }}</strong></label>
+    </div>
+</div>

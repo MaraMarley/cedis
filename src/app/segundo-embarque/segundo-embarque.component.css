@@ -1,0 +1,397 @@
+/* Estilos generales */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.titulo {
+    font-size: 60px;
+    color: red;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    color: blue;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.contenido {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.opcionesF {    
+    display: flex;
+    width: 50%;
+    min-height: 55px;
+
+    div {
+        border: 2px solid black;
+        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    div:hover {  /* Aplica el hover directamente a los divs */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px; /* Cambia el color del texto */
+    }
+}
+
+.textos {
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    font-size: 32px;
+    flex: 1;
+}
+
+.etiquetas {
+    width: 20%;
+    text-align: start;
+    flex: 2;
+}
+
+input.form-control.etiquetas {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.incorrecto {
+    color: red;
+    font-size: 30px;
+    font-weight: 500;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.er {
+    font-weight: bold;
+    display: block;
+    font-size: 21px;
+    color: red;
+    /* margin-top: 10px;
+    margin-bottom: 20px; */
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Estilos responsivos */
+@media (max-width: 800px) {
+    .container {
+        padding: 15px;
+    }
+
+    .titulo {
+        font-size: 50px;  /* Ajuste del tamaño del título */
+    }
+
+    p {
+        font-size: 24px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 90%; /* El formulario toma un mayor porcentaje del ancho */
+        text-align: left; /* Alineación a la izquierda para mayor legibilidad */
+    }
+
+    .textos {
+        font-size: 18px;
+        width: 100%;  /* Hacer que los textos ocupen el 100% del ancho */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* La etiqueta ocupa el 100% del ancho */
+        margin-top: 5px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 16px;
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+    /* Ajustes específicos para dispositivos entre 500px y 800px */
+    .container {
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 48px;  /* Un tamaño de título intermedio para estos dispositivos */
+    }
+
+    p {
+        font-size: 22px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 85%; /* Hacer que ocupe un poco más de espacio pero no demasiado */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 17px; /* Ligera reducción para pantallas medianas */
+        width: 100%;  /* Asegurando que ocupe el 100% del ancho */
+        margin-bottom: 10px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: 5px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 15px;  /* Ajuste del tamaño de los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 40px;  /* Ajuste del tamaño del título para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 20px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 100%;  /* Ocupa el 100% del ancho */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 16px;  /* Reducción del tamaño de la fuente en pantallas muy pequeñas */
+        width: 100%;  /* Asegura que el texto ocupe el 100% */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: -4px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 14px;  /* Ajuste en el tamaño de la fuente para los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+
+
+@media (max-width: 375px) {
+    .container {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 40px;  /* Ajuste del tamaño del título para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 20px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 100%;  /* Ocupa el 100% del ancho */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 16px;  /* Reducción del tamaño de la fuente en pantallas muy pequeñas */
+        width: 100%;  /* Asegura que el texto ocupe el 100% */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: -4px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 14px;  /* Ajuste en el tamaño de la fuente para los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+
+@media (max-width: 414px) {
+    .container {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 40px;  /* Ajuste del tamaño del título para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 20px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 100%;  /* Ocupa el 100% del ancho */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 16px;  /* Reducción del tamaño de la fuente en pantallas muy pequeñas */
+        width: 100%;  /* Asegura que el texto ocupe el 100% */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: -4px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 14px;  /* Ajuste en el tamaño de la fuente para los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 40px;  /* Ajuste del tamaño del título para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 20px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 100%;  /* Ocupa el 100% del ancho */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 16px;  /* Reducción del tamaño de la fuente en pantallas muy pequeñas */
+        width: 100%;  /* Asegura que el texto ocupe el 100% */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: -4px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 14px;  /* Ajuste en el tamaño de la fuente para los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}
+
+
+@media (max-width: 720px) {
+    .container {
+        padding: 10px;
+    }
+
+    .titulo {
+        font-size: 40px;  /* Ajuste del tamaño del título para pantallas más pequeñas */
+    }
+
+    p {
+        font-size: 20px;  /* Ajuste del tamaño del párrafo */
+    }
+
+    .contenido {
+        flex-direction: row; /* Alineación horizontal (row) */
+        align-items: center; /* Alineación centrada */
+        width: 100%;  /* Ocupa el 100% del ancho */
+        text-align: left; /* Alineación a la izquierda */
+    }
+
+    .textos {
+        font-size: 16px;  /* Reducción del tamaño de la fuente en pantallas muy pequeñas */
+        width: 100%;  /* Asegura que el texto ocupe el 100% */
+        margin-bottom: 5px;
+    }
+
+    .etiquetas {
+        width: 100%;  /* Asegura que las etiquetas ocupen el 100% */
+        margin-top: -4px;
+    }
+
+    input.form-control.etiquetas {
+        font-size: 14px;  /* Ajuste en el tamaño de la fuente para los inputs */
+    }
+
+    .opcionesF div:active {  /* Forzar el cambio de color cuando se toque el div (para móviles) */
+        background-color: #f0f0f0;  /* Cambia el color de fondo */
+        color: red;  
+        font-size: 30px;  /* Cambia el color del texto */
+    }
+}

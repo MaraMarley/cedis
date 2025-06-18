@@ -1,0 +1,144 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: 70px;
+    color: red;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.texto label {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.texto input {
+    padding: 10px;
+    font-size: 2em;
+    width: 100%;
+    max-width: 650px;
+    box-sizing: border-box;
+
+}
+
+.texto button {
+    padding: 10px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    max-width: 200px;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.mensaje {
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    transition: opacity 1s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+
+.correcto {
+    color: green;
+    font-size: 40px;
+    font-weight: 500;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.incorrecto {
+    color: red;
+    font-size: 40px;
+    font-weight: 500;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.container2 {
+    width: 100%;
+    padding: 10px;
+
+}
+
+.respuesta {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.texto2 {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+}
+
+/* responsividad*/
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2.5em;
+    }
+
+    .texto {
+        font-size: 1.2em;
+        gap: 10px;
+    }
+    .respuesta .texto2{
+        font-size: 1.2em;
+        gap: 10px;
+    }
+    .texto label {
+        font-size: 1em;
+    }
+
+    .texto input,
+    .texto button {
+        font-size: 1em;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2em;
+    }
+
+    .texto {
+        font-size: 1em;
+    }
+    .respuesta .texto2 {
+        font-size: 1em;
+    }
+
+    .texto input,
+    .texto button {
+        font-size: 1em;
+    }
+}
