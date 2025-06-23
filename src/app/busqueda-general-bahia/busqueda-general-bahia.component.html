@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="divTitle">
+        <label for="">{{ title }}</label>
+    </div>
+
+    <div class="divGeneral" *ngIf="showTable">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>{{ bahia }}</th>
+                    <th>{{ tienda }}</th>
+                    <th>{{ escaneadas }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of data" (click)="handleClick(a)">
+                    <td>{{ a.bahia }}</td>
+                    <td>{{ a.tienda }}</td>
+                    <td>{{ a.escaneadas }}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+
+     <div class="divGeneral" *ngIf="showResponse">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>{{ bahia }} {{"Carlitos"}}</th>
+                    <th>{{ tienda }}</th>
+                    <th>{{ escaneadas }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of data" (click)="handleClick(a)">
+                    <td>{{ a.bahia }}</td>
+                    <td>{{ a.tienda }}</td>
+                    <td>{{ a.escaneadas }}</td>
+                </tr>
+            </tbody>
+
+        </table>        
+    </div>
+
+    <label for="" *ngIf="showResponse" (click)="ShowGeneralReport()">F1</label>
+
+</div>

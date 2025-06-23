@@ -43,6 +43,6 @@
     <div class="navegacion">        
         <label for="" (click)="irAOtraPagina()" ><strong>{{ regresar }}</strong></label>
         <label for=""  (click)="clickOtraCaja()" #otraCaja ><strong>{{ optionotraCaja }}</strong></label>        
-        <label for=""  (click)="click7()" #otraCaja ><strong>{{ Siete }}</strong></label>
+        <label for="" *ngIf="show7"  (click)="click7()" #otraCaja ><strong>{{ Siete }}</strong></label>
     </div>
 </div>

@@ -3,3 +3,8 @@ export interface Ibahia {
     bahia: string;
     etiqueta_caja?: string;
 }
+
+export interface IConsultaCaja {
+    orden: number;
+    tienda: number;
+}

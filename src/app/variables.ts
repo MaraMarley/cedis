@@ -15,6 +15,13 @@ export const APIRUL_53GUMD05C4N30 = 'http://localhost:5242/cedis/53GUMD05C4N30';
 export const APIRUL_53GUMD05C4N30F4L74N735 = 'http://localhost:5242/cedis/53GUMD05C4N30F4L74N735';
 
 
+// URL PARA LAS NUEVAS PANTALLAS DE BAHIAS
+export const APIRUL_G3TC0N5ULT4C4J4 = 'http://localhost:5242/cedis/G3TC0N5ULT4C4J4';
+export const APIRUL_G3TC0N5ULT4G3N3R4LD3BAH145 = 'http://localhost:5242/cedis/G3TC0N5ULT4C4J4';
+export const APIRUL_G3TC0N5ULT4D3T4113D3B4H14 = 'http://localhost:5242/cedis/G3TC0N5ULT4C4J4';
+
+
+
 // develop ambiente test cedis   
 // export const APIURL_CALIDAD = 'http://192.168.102.13/cedis/C4L1D4DC3D1S';
 // export const APIURL_RECIBO = 'http://192.168.102.13/cedis/R3C1B0C3D1S';

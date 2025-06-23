@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { ProcesosCedisService } from '../service/procesos-cedis.service';
 
 @Component({
@@ -23,9 +23,20 @@ export class MainMenuComponent {
     });
   }
   onSubmit() {
-    const perfil = this.form.get('perfil')?.value       
-    this.service.setPerfil(perfil);     
-    this.router.navigate(['/menu']);
+    if(this.form.get('perfil')!.value != '')
+    {     
+      const perfil = this.form.get('perfil')?.value;
+      this.service.setPerfil(perfil);
+      this.router.navigate(['/menu']);
+    }
   }
 
+   @HostListener('document:keydown', ['$event'])
+      handleKeyboardEvent(event: KeyboardEvent) {
+        if (event.key === 'F1') {
+          event.preventDefault();         
+        }              
+      }
 }
+
+
