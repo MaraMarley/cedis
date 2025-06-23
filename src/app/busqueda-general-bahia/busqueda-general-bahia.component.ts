@@ -68,10 +68,10 @@ export class BusquedaGeneralBahiaComponent implements OnInit {
     }
   }
 
-  handleClick(item: any) {
+  handleClick(item: any) {    
     const body = {
-      orden:  this.orden,
-      tienda: this.tienda
+      orden:  item.bahia,
+      tienda: item.tienda
     }
     this.service.getConsultaDetalleDeBahias(body).subscribe(resp => {
       console.log('Respuesta: ', resp);

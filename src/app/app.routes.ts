@@ -16,6 +16,8 @@ import { SegundoScanerComponent } from './segundo-scaner/segundo-scaner.componen
 import { SegundoFaltantesComponent } from './segundo-faltantes/segundo-faltantes.component';
 import { BuscarCajaBahiaComponent } from './buscar-caja-bahia/buscar-caja-bahia.component';
 import { BusquedaGeneralBahiaComponent } from './busqueda-general-bahia/busqueda-general-bahia.component';
+import { ResumenBahiaComponent } from './resumen-bahia/resumen-bahia.component';
+import { ConsultaCajasEnBahiasComponent } from './consulta-cajas-en-bahias/consulta-cajas-en-bahias.component';
 
 export const routes: Routes = [
     { path: '', component: MainMenuComponent },
@@ -31,6 +33,8 @@ export const routes: Routes = [
     { path: 'validaBahia', component: ValidaBahiaComponent},
     { path: 'buscarCajaBahia', component: BuscarCajaBahiaComponent},
     { path: 'busquedaGeneralBahia', component: BusquedaGeneralBahiaComponent},
+    { path: 'resumenBahia', component: ResumenBahiaComponent},
+    { path: 'consultaCajasEnBahias', component: ConsultaCajasEnBahiasComponent},
     { path: 'primer-scaner', component: PrimerScanerComponent},
     { path: 'primer-faltantes/:orden', component: PrimerFaltantesComponent},
     { path: 'segundo-scaner', component: SegundoScanerComponent},

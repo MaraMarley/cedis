@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { filter, Observable, pairwise } from 'rxjs';
-import { APIURL_AVANCEREC, APIURL_CALIDAD,APIURL_CIERREOC,APIRUL_G3TB4I4, APIURL_GETPRIMERCONTEOFOLIO,APIURL_GETPRIMERCONTEOSCANER,APIURL_GETSEGUNDOCONTEOFOLIO,APIURL_GETSEGUNDOCONTEOSCANER,APIURL_RECIBO, APIURL_VALPRECIO, APIRUL_PR1M3R5C4N30, APIRUL_PR1M3R5C4N30F4L74N735, APIRUL_53GUMD05C4N30, APIRUL_53GUMD05C4N30F4L74N735, APIRUL_G3TC0N5ULT4C4J4, APIRUL_G3TC0N5ULT4G3N3R4LD3BAH145, APIRUL_G3TC0N5ULT4D3T4113D3B4H14 } from '../variables';
+import { APIURL_AVANCEREC, APIURL_CALIDAD,APIURL_CIERREOC,APIRUL_G3TB4I4, APIURL_GETPRIMERCONTEOFOLIO,APIURL_GETPRIMERCONTEOSCANER,APIURL_GETSEGUNDOCONTEOFOLIO,APIURL_GETSEGUNDOCONTEOSCANER,APIURL_RECIBO, APIURL_VALPRECIO, APIRUL_PR1M3R5C4N30, APIRUL_PR1M3R5C4N30F4L74N735, APIRUL_53GUMD05C4N30, APIRUL_53GUMD05C4N30F4L74N735, APIRUL_BU5C4RC4J45B4H145MARA1, APIRUL_C0N5ULT4G3N3R4LB5H145MARA2, APIRUL_C0N5ULT4D3T4113B4145MARA3 } from '../variables';
 import { Iembarqes } from '../interfaces/iembarqes';
 import { Ibahia, IConsultaCaja } from '../interfaces/ibahia';
 import { NavigationEnd, Router } from '@angular/router';
@@ -22,9 +22,9 @@ export class ProcesosCedisService {
   private apiUrlGetSegundoConteofolio = APIURL_GETSEGUNDOCONTEOFOLIO;
   private apiUrlGetSegundoConteoScaner = APIURL_GETSEGUNDOCONTEOSCANER;
   private apiUrlG3TB4I4 = APIRUL_G3TB4I4;
-  private apiUrlG3TC0N5ULT4C4J4 = APIRUL_G3TC0N5ULT4C4J4;
-  private apiUrlG3TC0N5ULT4D3T4113D3B4H14 = APIRUL_G3TC0N5ULT4D3T4113D3B4H14;
-  private apiUrlG3TC0N5ULT4G3N3R4LD3BAH145 = APIRUL_G3TC0N5ULT4G3N3R4LD3BAH145;
+  private apiUrlBU5C4RC4J45B4H145MARA1 = APIRUL_BU5C4RC4J45B4H145MARA1;
+  private apiUrlC0N5ULT4G3N3R4LB5H145MARA2 = APIRUL_C0N5ULT4G3N3R4LB5H145MARA2;
+  private apiUrlC0N5ULT4D3T4113B4145MARA3 = APIRUL_C0N5ULT4D3T4113B4145MARA3;
   private apiUrlPR1M3R5C4N30 = APIRUL_PR1M3R5C4N30;
   private apiUrlPR1M3R5C4N30F4L74N735 = APIRUL_PR1M3R5C4N30F4L74N735;
   private apiUrl53GUMD05C4N30 = APIRUL_53GUMD05C4N30;
@@ -148,17 +148,17 @@ obtenerDatosPrimerEscaneo(): any {
 
   // servicios para las nuevas pantallas
    getConsultaCaja(body:IConsultaCaja): Observable<any> {        
-    const url = `${this.apiUrlG3TC0N5ULT4C4J4}?orden=${body.orden}&tienda=${body.tienda}`;
+    const url = `${this.apiUrlBU5C4RC4J45B4H145MARA1}?orden=${body.orden}&tienda=${body.tienda}`;
     return this.http.get<any>(url);
   } 
 
  getConsultaGeneralDeBahias(): Observable<any> {        
-    const url = `${this.apiUrlG3TC0N5ULT4G3N3R4LD3BAH145}`;
+    const url = `${this.apiUrlC0N5ULT4G3N3R4LB5H145MARA2}`;
     return this.http.get<any>(url);
   }
 
    getConsultaDetalleDeBahias(body:any): Observable<any> {        
-    const url = `${this.apiUrlG3TC0N5ULT4D3T4113D3B4H14}?orden=${body.orden}&tienda=${body.tienda}`;
+    const url = `${this.apiUrlC0N5ULT4D3T4113B4145MARA3}?bahia=${body.orden}&tienda=${body.tienda}`;
     return this.http.get<any>(url);
   } 
 
