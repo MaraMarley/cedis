@@ -197,7 +197,7 @@
         this.form.get('caja')?.disable();
         this.ubicacionInput.nativeElement.focus();
       }
-      if (event.key === '7') {
+      if (this.show7 && event.key === '7') {
         event.preventDefault();
         this.show7 = false;
         this.form.get('caja')?.enable();

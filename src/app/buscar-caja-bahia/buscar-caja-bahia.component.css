@@ -32,6 +32,8 @@
 
 .divOptions{    
     font-size: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 720px) {
@@ -42,7 +44,7 @@
         font-size: 15px;
     }
     .container .divInputs{        
-        width: 30%;
+        width: 100%;
         label{
             max-width: 100%;
             font-size: 12px;
@@ -52,7 +54,7 @@
         }       
     }
      .container .divTable{
-            width: 30%;           
+            width: 100%;           
         }
 
        .divTable table {

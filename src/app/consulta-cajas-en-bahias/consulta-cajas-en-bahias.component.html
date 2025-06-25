@@ -1,1 +1,53 @@
-<p>consulta-cajas-en-bahias works!</p>
+<div class="container">
+    <div class="title">
+        <label for="">{{ title }}</label>
+    </div>
+
+   <div class="divInputs">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="orden">
+    <label for="orden" style="margin-right: 15px;">{{ orden }}</label>
+    <input style="text-align: center;"
+      type="text"      
+      id="orden"
+      formControlName="orden"
+      #ordenInput
+      (keydown.enter)="enfocarTienda()"
+    />
+  </div>
+  <div class="tienda">
+    <label for="tienda" style="margin-right: 15px;">{{ tienda }}</label>
+    <input
+    style="text-align: center;"
+      type="text"
+      id="tienda"
+      formControlName="tienda"
+      #tiendaInput
+      (keydown.enter)="verificarYEnviar()"
+    />
+  </div>
+  <!-- <button type="submit">Enviar</button> -->
+</form>
+</div>
+
+
+    <div class="divTable" *ngIf="resultTable">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>{{ etiqueta }}</th>
+                    <th>{{ bahia }}</th>
+                </tr>               
+            </thead>
+            <tbody *ngFor="let a of data2">
+                <tr>
+                    <th>{{a.Etiqueta}}</th>
+                    <th>{{a.bahia}}</th>
+                </tr>               
+            </tbody>
+        </table>
+    </div>
+    <div class="divOptions" *ngIf="resultTable">
+        <label for="">[F1]:<strong>{{ optSalir }}</strong></label>        
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.container {
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .divTitle {
+    font-size: 60px;
+    color: red;
+    font-weight: 800;
+}
+
+.container .divGeneral {    
+    min-width: 30%;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.f1{
+    border: 1px solid;
+    width: 40%;
+}
+
+@media screen and (max-width: 720px) {
+ .container{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .container .divTitle{
+    font-size: 18px;
+ }
+
+ .container .divGeneral{    
+    overflow-x: auto;
+    width: 100%;
+     flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+ }
+
+ .container .divGeneral .myTable {
+    /* border: 3px solid goldenrod;
+    max-width: 10px !important; */
+     font-size: 7px;
+    max-width: 10px !important;
+    width: 50%;
+    table-layout:auto;
+    overflow-wrap: break-word;
+ }
+}

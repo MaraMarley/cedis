@@ -1,0 +1,69 @@
+.container {        
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .title {
+     font-size: 60px;
+        color: red;
+        font-weight: 800;
+}
+
+.divInputs{       
+    width: 30%;
+     input{
+            border: 2px solid rgb(3, 154, 173);
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-top: none;
+            border-left: none;
+        }
+    .orden{
+        gap: 10px;
+    }
+}
+
+.divTable {
+    width: 50%;
+    overflow-x: auto;    
+}
+
+.divOptions{    
+    font-size: 10px;
+}
+
+@media screen and (max-width: 720px) {
+    .container {        
+        
+    }
+   .container .title{
+        font-size: 15px;
+    }
+    .container .divInputs{        
+        width: 100%;
+        label{
+            max-width: 100%;
+            font-size: 12px;
+        }
+        input{            
+            max-width: 100%;
+            font-size: 12px;
+        }       
+    }
+     .container .divTable{
+            width: 100%;            
+        }
+
+       .divTable table {
+    width: 100%;
+    table-layout: fixed; 
+    word-wrap: break-word;
+    th{
+        font-size: 50%;
+        font-weight: 500;
+    }
+}
+  
+}

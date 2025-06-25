@@ -1,1 +1,46 @@
-<p>resumen-bahia works!</p>
+<div class="container">
+    <div class="divTitle" style="">
+        <label for="">{{ title }}</label>
+    </div>
+
+    <div class="divGeneral" *ngIf="showTable">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>{{ bahia }}</th>
+                    <th>{{ tienda }}</th>
+                    <th>{{ inventario }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of data" (click)="handleClick(a)">
+                    <td>{{ a.bahia }}</td>
+                    <td style="cursor: pointer;">{{ a.tienda }}</td>
+                    <td>{{ a.escaneadas }}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="divGeneral" *ngIf="showResponse">
+            <table class="table table-borderless myTable" >
+                <thead>
+                    <tr>
+                        <th>{{ bahia }}</th>
+                        <th>{{ tienda }}</th>
+                        <th>{{ caja }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let a of data2" (click)="handleClick(a)">
+                        <td>{{ a.bahia }}</td>
+                        <td>{{ a.tienda }}</td>
+                        <td>{{ a.caja }}</td>
+                    </tr>
+                </tbody>
+            </table>           
+        </div>
+     <div class="f1" *ngIf="showResponse">
+                <label (click)="ShowGeneralReport()">F1</label>
+            </div>
+
+</div>
